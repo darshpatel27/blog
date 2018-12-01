@@ -1,8 +1,8 @@
-baseURL = "http://example.org/"
+baseURL = "http://darshanpate.in/"
 languageCode = "en-us"
 title = "Welcome"
 theme = "hyde-hyde"
-
+highlightjs = true
 disqusShortname = "darshpatel27"
 
 [params.social]
