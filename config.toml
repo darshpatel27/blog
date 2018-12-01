@@ -1,0 +1,19 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Welcome"
+theme = "hyde-hyde"
+[params.social]
+	twitter = "darshpatel27"
+	linkedin = "darshpatel27"
+	github = "darshpatel27"
+	gravatar = "darsh.patel27@gmail.com"
+[[menu.main]]
+    name = "Posts"
+    weight = 100
+    identifier = "posts"
+    url = "/posts/"
+[[menu.main]]
+    name = "About"
+    identifier = "about"
+    weight = 300
+    url = "/about/"
