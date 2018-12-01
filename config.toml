@@ -2,6 +2,9 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "Welcome"
 theme = "hyde-hyde"
+
+disqusShortname = "darshpatel27"
+
 [params.social]
 	twitter = "darshpatel27"
 	linkedin = "darshpatel27"
