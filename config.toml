@@ -1,9 +1,10 @@
-baseURL = "http://darshanpate.in/"
+baseURL = "http://darshanpatel.in/"
 languageCode = "en-us"
-title = "Welcome"
+title = "Home"
 theme = "hyde-hyde"
 highlightjs = true
 disqusShortname = "darshpatel27"
+staticDir = ["static/img"]
 
 [params.social]
 	twitter = "darshpatel27"
