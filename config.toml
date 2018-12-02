@@ -19,5 +19,5 @@ staticDir = ["static/img"]
 [[menu.main]]
     name = "About"
     identifier = "about"
-    weight = 300
+    weight = 200
     url = "/about/"
