@@ -1,5 +1,5 @@
 ---
-title: "Side Project"
+title: "Side Project (Bookmarking App)"
 date: 2018-08-08T12:59:25+05:30
 draft: false
 ---

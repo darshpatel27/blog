@@ -4,6 +4,7 @@ title = "Home"
 theme = "hyde-hyde"
 highlightjs = true
 disqusShortname = "darshpatel27"
+googleAnalytics = "UA-130214586-1"
 staticDir = ["static/img"]
 
 [params.social]
