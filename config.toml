@@ -1,0 +1,26 @@
+baseURL = 'https://darshanpatel.in/'
+languageCode = 'en-us'
+title = "Darshan's Blog"
+theme = "hyde"
+
+disqusShortname = "darshpatel27"
+googleAnalytics = ""
+staticDir = ["static/img"]
+
+[params]
+  themeColor = "theme-base-0d"
+  mainSections = ["posts"]
+  authorImage = "/avatar.jpg"
+  description = "I use this space to share my personal thoughts/learnings"
+  twitter = "darshpatel27"
+  github = "darshpatel27"
+  linkedin = "darshpatel27"
+
+
+[Menus]
+  main = [
+      {Name = "Posts", Weight = 100, URL = "/posts/"},
+      {Name = "Books", Weight = 200, URL = "/books/"},
+      # {Name = "Leadership", Weight = 300, URL = "/leadership/"},
+      # {Name = "About", Weight = 400, URL = "/about/"}
+  ]
