@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Darshan&#39;s Blog</title>
+    <link>https://darshanpatel.in/</link>
+    <description>Recent content on Darshan&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 21 Jan 2022 19:04:24 +0530</lastBuildDate><atom:link href="https://darshanpatel.in/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Book Recommendations</title>
+      <link>https://darshanpatel.in/books/recommendations/</link>
+      <pubDate>Fri, 21 Jan 2022 19:04:24 +0530</pubDate>
+      
+      <guid>https://darshanpatel.in/books/recommendations/</guid>
+      <description>The following books have really helped me in getting better at different competencies and i would highly recommend it to all
+Tech The Design Of The Unix Operating System - Maurice J Bach Designing Data-Intensive Applications - Martin Kleppmann Introduction to Algorithms - CLRS Refactoring: Improving the Design of Existing Code - Martin Fowler Design Patterns: Elements of Reusable Object-Oriented Software - Erich Gamma Clean Code: A Handbook of Agile Software Craftsmanship - Robert C Martin The Effective Engineer - Edmond Lau Start-ups The hard thing about hard things - Ben Horowitz Zero to One - Peter Thiel Leadership High Output Management - Andrew S Grove Leading - Sir Alex Ferguson </description>
+    </item>
+    
+    <item>
+      <title>My First Post</title>
+      <link>https://darshanpatel.in/posts/my-first-post/</link>
+      <pubDate>Fri, 21 Jan 2022 19:04:24 +0530</pubDate>
+      
+      <guid>https://darshanpatel.in/posts/my-first-post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Good Engineering Leader ? </title>
+      <link>https://darshanpatel.in/leadership/good-leader/</link>
+      <pubDate>Fri, 21 Jan 2022 09:49:09 +0530</pubDate>
+      
+      <guid>https://darshanpatel.in/leadership/good-leader/</guid>
+      <description>If you are planning to become an Engineering leader or have already stepped in to being one, I am sure this is one questions that you will keep coming back to
+It is something that i have wondered / explored a lot about. Talking to leaders that i look up to, reading things online and a lot of analysis of how my journey has been.
+If i have to sum it up, I would say is the intersection of 3 things that defines how good an engineering leader you are going to be</description>
+    </item>
+    
+    <item>
+      <title>If you can master only 1 skill</title>
+      <link>https://darshanpatel.in/leadership/one-skill/</link>
+      <pubDate>Fri, 21 Jan 2022 09:49:09 +0530</pubDate>
+      
+      <guid>https://darshanpatel.in/leadership/one-skill/</guid>
+      <description>While a lot of skills are important and will help in different aspects/stages of life, there exists one single skill that will help with almost anything and everything and ultimately proves to be a game changer.
+That one skill is &amp;ldquo;The Art of Story Telling&amp;rdquo;
+Let me explaining</description>
+    </item>
+    
+    <item>
+      <title>Leadership Lessons</title>
+      <link>https://darshanpatel.in/leadership/leadership_lessons/</link>
+      <pubDate>Fri, 21 Jan 2022 09:49:09 +0530</pubDate>
+      
+      <guid>https://darshanpatel.in/leadership/leadership_lessons/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Building static blog/website using Hugo</title>
+      <link>https://darshanpatel.in/posts/hugo/</link>
+      <pubDate>Sat, 01 Jan 2022 16:23:57 +0530</pubDate>
+      
+      <guid>https://darshanpatel.in/posts/hugo/</guid>
+      <description>Recently i have set-up this blog using Hugo. I was able to do it over a weekend. It was a fun &amp;amp; rewarding experience. If you are interested in setting up a static blog/website all you have to do is follow these 6 simple steps
+1) Select your theme
+Hugo has a wide variety of themes to select from. Pick your favorite here
+2) Setting it up locally
+Follow the quick start guide here</description>
+    </item>
+    
+    <item>
+      <title>Side Project (Bookmarking App)</title>
+      <link>https://darshanpatel.in/posts/side-project/</link>
+      <pubDate>Sat, 01 Dec 2018 12:59:25 +0530</pubDate>
+      
+      <guid>https://darshanpatel.in/posts/side-project/</guid>
+      <description>Why i built my own Bookmarking app ( [ lynks.in ] ( https://lynks.in ) ) Its 2018 and bookmarking apps have been mainstream since at-least last 10 years. There are plenty of options available in the market already, so why exactly do we need yet another bookmarking app ?
+Let&amp;rsquo;s see I have been a heavy bookmark user since last many years. Needless to say that i have tried variety of bookmarks app over the years yet i always felt that none of them provides all the functionalities that i always wanted.</description>
+    </item>
+    
+    <item>
+      <title>Docker 101</title>
+      <link>https://darshanpatel.in/posts/docker/</link>
+      <pubDate>Sun, 28 Jan 2018 12:04:13 +0530</pubDate>
+      
+      <guid>https://darshanpatel.in/posts/docker/</guid>
+      <description>WHAT IS DOCKER ? To put it simply, Docker is a way of packing &amp;amp; distributing software.
+WHY DO WE NEED DOCKER ? Let&amp;rsquo;s say your are building a Python application using Django. You can provide list of Python dependencies/packages needed for the project inside requirements.txt file.
+Let&amp;rsquo;s say one of the dependency is celery. For celery to work it will need a backend ( let&amp;rsquo;s say we are using rabbitmq as backend for celery)</description>
+    </item>
+    
+  </channel>
+</rss>

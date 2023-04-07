@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  
+  <link href="https://darshanpatel.in/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.110.0">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Docker 101 &middot; Darshan&#39;s Blog</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://darshanpatel.in/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://darshanpatel.in/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://darshanpatel.in/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://darshanpatel.in/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class="theme-base-0d ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    
+      <div class="author-image">
+        <img src="/avatar.jpg" alt="Author Image" class="author-image">
+      </div>
+    
+
+    <div class="sidebar-about">
+      
+      <a href="https://darshanpatel.in/"><h2>Darshan&#39;s Blog</h2></a>
+
+      
+      <div class="social-media-links">
+        <a style="color:white" href="https://twitter.com/darshpatel27" rel="me"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>&nbsp;&nbsp;
+        <a style="color:white" href="https://github.com/darshpatel27" rel="me"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>&nbsp;&nbsp;
+        <a style="color:white" href="https://www.linkedin.com/in/darshpatel27" rel="me"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+      </div>
+      
+    </div>
+
+    
+    <nav class="posts-nav">
+      <ul class="sidebar-nav">
+        <li><a href="https://darshanpatel.in/">Home</a> </li>
+        <li><a href="/posts/"> Posts </a></li><li><a href="/books/"> Books </a></li>
+      </ul>
+    </nav>
+
+    <div class="rights-reserved">
+      <p>
+        &copy; 2023. All rights reserved. 
+      </p>
+    </div>
+
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Docker 101</h1>
+  <time datetime=2018-01-28T12:04:13&#43;0530 class="post-date">Sun, Jan 28, 2018</time>
+  <h4 id="what-is-docker-">WHAT IS DOCKER ?</h4>
+<p>To put it simply, Docker is a way of packing &amp; distributing software.</p>
+<h4 id="why-do-we-need-docker-">WHY DO WE NEED DOCKER ?</h4>
+<ul>
+<li>
+<p>Let&rsquo;s say your are building a Python application using Django. You can provide list of Python dependencies/packages needed for the project inside requirements.txt file.</p>
+</li>
+<li>
+<p>Let&rsquo;s say one of the dependency is celery. For celery to work it will need a backend ( let&rsquo;s say we are using rabbitmq as backend for celery)</p>
+</li>
+<li>
+<p>For the project to work on a system you will have to install rabbitmq separately.</p>
+</li>
+<li>
+<p>Now Imagine your colleague wants to set up this project locally on his/her laptop. They will have to</p>
+<ul>
+<li>Step 1 : Download the code from repo.</li>
+<li>Step 2 : Install dependencies using requirements.txt.</li>
+<li>Step 3 : Install rabbitmq on the system manually.</li>
+</ul>
+<p><strong>Step 3</strong> is where the problem starts. For e.g.</p>
+<ol>
+<li>You might have instructions for installing rabbitmq on linux but your friend is using mac.</li>
+<li>Let&rsquo;s say if they ended up installing latest version but your app requires specific version of rabbitmq (latest version is not supported).</li>
+</ol>
+</li>
+</ul>
+<p>There are many more reasons but let&rsquo;s say for now it&rsquo;s clear that we might need a better way to handle these problems.</p>
+<p><code>SO HOW DOES DOCKER SOLVE ABOVE PROBLEMS ?</code></p>
+<p>Sure, we will surely discuss that but before we jump to that, let&rsquo;s understand a bit more about how Docker works.</p>
+<h4 id="how-docker-works-">HOW DOCKER WORKS ?</h4>
+<p><strong>Docker consists of three main parts</strong></p>
+<hr>
+<ol>
+<li>
+<p>Dockerfile</p>
+<p>A Dockerfile is a file that you create which produces a Docker image when you build it.</p>
+</li>
+<li>
+<p>Docker Image</p>
+<p>An image is a read-only template with instructions for creating a Docker container. You can find pre-built images for
+commonly used softwares on dockerhub
+for e.g : [https://hub.docker.com/_/rabbitmq] (<a href="https://hub.docker.com/_/rabbitmq">https://hub.docker.com/_/rabbitmq</a>)</p>
+<p>Also you can build Docker images from Docker file using command below</p>
+<p><code>docker build -f &lt;docker_file_path&gt; -t &lt;name:tag&gt;</code></p>
+</li>
+<li>
+<p>Docker Container</p>
+<p>A container is a runnable instance of an image. You can create, start, stop, move, or delete a container using the Docker API or CLI.</p>
+<p>For e.g. You can start a container is command below</p>
+<p><code>docker run -d &lt;dockerimage_name&gt;</code></p>
+</li>
+</ol>
+<hr>
+<h4 id="so-what-if-we-have-more-than-one-docker-containers">So what if we have more than one docker containers?</h4>
+<h5 id="docker-compose">docker-compose</h5>
+<p>Docker Compose is an official tool that helps you manage multiple Docker containers by letting you define everything through a docker-compose.yml file.</p>
+<hr>
+<blockquote>
+<p>Coming back to the solution of our problem. How do we help our colleague install the project locally
+on his/her computer without any hassle using Docker?</p>
+</blockquote>
+<p>Well all you have to do is add the below file to your code repo.</p>
+<p><code>docker-compose.yml</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#39;3.3&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">my_rabbitmq</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">rabbitmq:3.7.8-alpine</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;6672:5672&#34;</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;16672:15672&#34;</span></span></span></code></pre></div>
+<p>Anyone who wants to test out the application can checkout the django repo and run</p>
+<ol>
+<li>pip install -r requirements.txt ( to install all necessary Python packages )</li>
+<li>docker-compose up ( to install all other dependencies, in our case rabbitmq )</li>
+</ol>
+<h3 id="miscellaneous">MISCELLANEOUS</h3>
+<p><strong>Some frequently used commands for docker containers</strong></p>
+<ol>
+<li>
+<p><code>docker ps</code></p>
+<ul>
+<li>Shows all the docker containers running in the background</li>
+</ul>
+</li>
+<li>
+<p><code>docker stop &lt;container_id&gt;</code></p>
+<ul>
+<li>stops the container ( alive but not running)</li>
+</ul>
+</li>
+<li>
+<p><code>docker start &lt;container_id&gt;</code></p>
+<ul>
+<li>starts the container ( that was in stop state)</li>
+</ul>
+</li>
+<li>
+<p><code>docker rm -f &lt;container_id/name&gt;</code></p>
+<ul>
+<li>force remove/kill/delete a container</li>
+</ul>
+</li>
+<li>
+<p><code>docker ps -a</code></p>
+<ul>
+<li>shows all the docker containers that are in stopped stage or exited stage</li>
+</ul>
+</li>
+<li>
+<p><code>docker stats &lt;container_id&gt;</code></p>
+<ul>
+<li>Shows resource utilisation by the container ( CPU, Memory etc )</li>
+</ul>
+</li>
+<li>
+<p><code>docker logs &lt;container_id&gt;</code></p>
+<ul>
+<li>Fetch the logs of a container</li>
+</ul>
+</li>
+<li>
+<p><code>docker exec -it &lt;container_id&gt; bash</code></p>
+<ul>
+<li>Run a command in a running container</li>
+</ul>
+</li>
+</ol>
+
+</div>
+
+<h2>Comments</h2>
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "darshpatel27" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </main>
+
+    
+  </body>
+</html>
